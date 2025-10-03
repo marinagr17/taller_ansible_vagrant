@@ -1,2 +1,8 @@
-- name: Actualizamos el sistema
-  apt: 
+- name: Actualizamos el sistema #descripcion breve
+  apt: #modulo apt
+      update_cache: yes #igual que apt-get update
+      upgrade: dist #igual que apt-get dist-upgrade
+      autoremove: yes #igual que apt-get autoremove
+  become: true #ejecutar con sudo
+
+#no se pone hosts porque ya está definido en site.yaml
